@@ -1,0 +1,56 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed';
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color:#FF4136;
+	font-family:"Times New Roman";
+}
+
+h1{
+	font-family: 'Roboto Condensed', sans-serif;
+	color:#111111;
+	text-align:center;
+	font-weight:bold;
+}
+
+div#quotes{
+	position:fixed;
+	border:"1px solid white";
+	font-style:italic;
+	padding:40px;
+}
+h1#quotes{
+	font-family: 'Roboto Condensed', sans-serif;
+	position:fixed;
+	color:#ffffff;
+	padding:40px;
+	text-align:center;
+	font-weight:bold;
+	font-style:normal;		
+	}
+div{
+	margin-bottom:100px;
+	background:white;
+	color:#111111;
+	border:"white";
+	padding:20px;	
+}
+span{
+	color:#FFDC00;
+}
+a{
+	text-decoration:none;	
+	color:#666666;
+	background-color:#DDDDDD;
+	font-style:normal;
+	padding:1px;
+}
+
+a:hover{
+	color:#333333;
+	background-color:#EEEEEE;
+}
