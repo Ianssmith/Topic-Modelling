@@ -17,7 +17,7 @@ var wiki_sv = d3.dsvFormat("_____");
 function analyze(error,data,wiki,stopw){
 	if(error){console.log(error);}
 
-	console.log(data)
+	//console.log(data)
 
 	d3.select('body')
 		.style("max-width","800px")
@@ -48,7 +48,7 @@ function analyze(error,data,wiki,stopw){
 				datarray.push(temp2[t][i].charAt(0).toUpperCase() + temp2[t][i].substr(1).toLowerCase())
 			}
 		}
-		console.log(datarray)
+		//console.log(datarray)
 
 	var artArray = []
 		for(var k=0;k<temp2.length;k++){
@@ -70,10 +70,8 @@ function analyze(error,data,wiki,stopw){
 		.style("position", "absolute")
 		.style("color","#111111");
 
-	//console.log(datarray);
 
 	var stopwarr = stopw.split(/\n/);
-	//console.log(stopwarr)
 
 //cycle and remove stop words from text
 	var checker = 0;
@@ -89,7 +87,7 @@ checker++;
 	}
 
 //create hash table array
-	console.log(datarray.length)
+	//console.log(datarray.length)
 	var hasharr = [];
 	for(var k in datarray){
 			if(hasharr[datarray[k]] >=1)
@@ -108,7 +106,6 @@ checker++;
 			return a<b ? 1:(a>b ? -1:0)
 		})
 	}
-	//console.log(sorted)
 
 //create hash counts for the amounts of word occurences
 	var hashhash = [];
@@ -118,10 +115,8 @@ checker++;
 			else
 				hashhash[sorted[k][1]] = 1;
 		}
-		//console.log(hashhash)
 	var sortedhash = [];
 	for(var key in hashhash){
-		//console.log([key])
 		sortedhash.push([key]);///because javascript...
 	}
 	//console.log(sortedhash)//???? 
@@ -134,15 +129,12 @@ checker++;
 	while(check2 <sorted.length){
 	for(var k=0;k<sortedhash.length;k++){
 		if(sorted[check2][1]+"" == sortedhash[k][0]){
-			sortedhash[k].push(sorted[check2][0][0])// += ":" + sorted[check2][0][0]//.splice(check2,1,0))
-			//sorted.splice(check2,1,0)
-			//k=0;
+			sortedhash[k].push(sorted[check2][0][0])
 		}
 		}
 		check2++;
 	}
 
-	//console.log(sortedhash);
 
 //function to check for keywords
 function checkWord(arr){

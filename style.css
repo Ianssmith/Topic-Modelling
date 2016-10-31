@@ -34,9 +34,8 @@ h1#quotes{
 	}
 div{
 	margin-bottom:100px;
-	background:white;
+	background:"#FF4136";
 	color:#111111;
-	border:"white";
 	padding:20px;	
 }
 span{
