@@ -8,13 +8,14 @@ var reut_sv = d3.dsvFormat("TEXT>&#2>");
 var wiki_sv = d3.dsvFormat("_____");
 
 	q.defer(d3.text,"reut/reut2-000.txt")
-	.defer(d3.text,"wikiP/wikiarticles.txt")
+	//.defer(d3.text,"wikiP/wikiarticles.txt")
 	.defer(d3.text,"mysqlstopw.txt")
 	//.defer(d3.json,"nytarticels.json")
 	.await(analyze);
 
 
-function analyze(error,data,wiki,stopw){
+//function analyze(error,data,wiki,stopw){
+function analyze(error,data,stopw){
 	if(error){console.log(error);}
 
 	//console.log(data)
